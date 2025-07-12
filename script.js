@@ -1,34 +1,3 @@
-
-function toggleOutput() {
-  const output = document.getElementById("output");
-  const toggleBtn = document.getElementById("toggleBtn");
-
-  if (output.style.display === "none") {
-    output.style.display = "block";
-    toggleBtn.textContent = "Hide Paragraph";
-  } else {
-    output.style.display = "none";
-    toggleBtn.textContent = "Show Paragraph";
-  }
-}
-
-function openModal() {
-  document.getElementById("traitsModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("traitsModal").style.display = "none";
-}
-
-// Optional: Close modal if user clicks outside content
-window.onclick = function(event) {
-  const modal = document.getElementById("traitsModal");
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
-
     // Sample letter traits — add your full list here
 const letterTraits = {
         a: [
@@ -805,6 +774,36 @@ t: [
         // You can continue adding c, d, e... here
 };
 
+
+function toggleOutput() {
+  const output = document.getElementById("output");
+  const toggleBtn = document.getElementById("toggleBtn");
+
+  if (output.style.display === "none") {
+    output.style.display = "block";
+    toggleBtn.textContent = "Hide Paragraph";
+  } else {
+    output.style.display = "none";
+    toggleBtn.textContent = "Show Paragraph";
+  }
+}
+
+function openModal() {
+  document.getElementById("traitsModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("traitsModal").style.display = "none";
+}
+
+// Optional: Close modal if user clicks outside content
+window.onclick = function(event) {
+  const modal = document.getElementById("traitsModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
 const traitsContainer = document.getElementById("traitsContainer");
 
 // Render buttons for each letter and its traits
@@ -821,12 +820,22 @@ for (const letter in letterTraits) {
   heading.textContent = `${label} ${letter.toUpperCase()}`;
   section.appendChild(heading);
 
-  letterTraits[letter].forEach((trait, index) => {
+ letterTraits[letter].forEach((trait, index) => {
     const btn = document.createElement("button");
     btn.textContent = `Trait ${index + 1}`;
-    btn.onclick = () => addText(trait, letter.toUpperCase(), index + 1);
+
+    btn.onclick = () => {
+      if (btn.disabled) return; // Prevent double-clicking
+
+      addText(trait, letter.toUpperCase(), index + 1);
+      btn.style.backgroundColor = "red";
+      btn.style.cursor = "not-allowed";
+      btn.disabled = true;
+    };
+
     section.appendChild(btn);
   });
+
 
   traitsContainer.appendChild(section);
 }
