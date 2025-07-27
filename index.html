@@ -4,6 +4,113 @@
   <meta charset="UTF-8">
   <title>Graphology Personality Tool</title>
   <style>
+
+    #traitsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .letter-row {
+      display: flex;
+      flex-wrap: wrap;        /* Wrap cards if screen is narrow */
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .trait-card {
+      flex: 0 0 150px;        /* Cards take 150px width, don’t shrink, don’t grow */
+      /* rest of your styles here */
+    }
+
+
+    .trait-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .trait-card:hover {
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    }
+
+    .trait-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    .trait-card button {
+      width: 100%;
+      margin: 0;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .trait-card button:disabled {
+      background-color: #d9534f; /* red */
+      cursor: not-allowed;
+    }
+
+
+    .trait-button-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .trait-button-image {
+      width: 50px;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+
+    /* Add to your existing CSS */
+    .trait-image {
+      max-width: 200px;
+      max-height: 150px;
+      display: block;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .trait-container {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-left: 3px solid #4CAF50;
+    }
+
+    /* Optional: Show image path on button hover */
+    button:hover::after {
+      content: attr(data-image-path);
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 5px;
+      z-index: 100;
+      margin-left: 10px;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -128,6 +235,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>
 </html>
