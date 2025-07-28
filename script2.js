@@ -3,7 +3,7 @@ const letterTraits = {
     a: [
         {
             explanation: "No inner loop shows an open-minded, honest individual. They open up and communicate with close people because they feel comfortable at home. Can sit calmly and do things.",
-            imagePath: "no loop.png"
+            imagePath: "no loop a.png"
         },
         {
             explanation: "Extended a: These writers are way more comfortable at home. They tend to be lazy and don't take quick action. They are unable to get out of their comfort zone.",
@@ -47,7 +47,7 @@ const letterTraits = {
         },
         {
             explanation: "Both-side loop: Two-faced individual who wants to be liked by others. Rare trait.",
-            imagePath: "both side loop.png"
+            imagePath: "both side loop small a.png"
         },
         {
             explanation: "Hooked: Avoids commitment, feels guilt, can be manipulative, and may twist facts. Very rare trait.",
@@ -105,7 +105,7 @@ const letterTraits = {
         },
         {
             explanation: "Gap on the left side: High blood pressure warning. Feel unsatisfied and greedy, always wanting more even after receiving what they desired.",
-            imagePath: "closed b with extended line on left .png"
+            imagePath: "gap on left side small b.png"
         },
         {
             explanation: "Upper gap: Partially satisfied individuals who feel more could have been achieved. Lacking emotional fulfillment.",
@@ -113,7 +113,7 @@ const letterTraits = {
         },
         {
             explanation: "Closed b with extended line on the left: Felt satisfied with what they got but still want more. Greedy nature.",
-            imagePath: "closed b with extended line on left .png"
+            imagePath: "letter b closed b with extended line on left .png"
         },
         {
             explanation: "Closed b with an upper line: Emotionally connected to their dreams. Clever individuals with a good business sense.",
@@ -137,11 +137,11 @@ const letterTraits = {
         },
         {
             explanation: "Small backside loop: Prefer exploring multiple options rather than sticking to one.",
-            imagePath: "small back side loop .png"
+            imagePath: "small back side loop b.png"
         },
         {
             explanation: "Medium backside loop: Consider a wide variety of possible solutions beyond just a few.",
-            imagePath: "midle backside loop.png"
+            imagePath: "midle backside loop b.png"
         },
         {
             explanation: "Large backside loop: Get confused due to too many options. Take a long time to act or recover.",
@@ -175,11 +175,11 @@ const letterTraits = {
         },
         {
             explanation: "Half e formation in c: Writers who hold grudges about social situations. These grudges negatively impact their mental and physical health. Often harsh toward the opposite sex.",
-            imagePath: "half e .png"
+            imagePath: "half e small c.png"
         },
         {
             explanation: "Letter e formation in c: Indicates a person who respects culture and traditions.",
-            imagePath: "letter e formation.png"
+            imagePath: "letter e formation small c.png"
         },
         {
             explanation: "Letter e formation in c with an extra line on the left side: These individuals frequently give unsolicited opinions on what is right and wrong.",
@@ -189,79 +189,79 @@ const letterTraits = {
     d: [
         {
             explanation: "Small oval: The writer is feeling a lot of pain and suffering. They feel incomplete.",
-            imagePath: "small oval.png"
+            imagePath: "small oval d.png"
         },
         {
             explanation: "Medium oval: Reserved individuals with a practical mindset and good common sense.",
-            imagePath: "medium oval .png"
+            imagePath: "medium oval d.png"
         },
         {
             explanation: "Large oval: People with strong business sense.",
-            imagePath: "large oval.png"
+            imagePath: "large oval d.png"
         },
         {
             explanation: "Short stem: Indicates poor physical health and an inability to perform heavy activities. Also suggests a lack of common sense.",
-            imagePath: "short stem.png"
+            imagePath: "short stem d.png"
         },
         {
             explanation: "Long stem: Suggests good physical health and confidence in one's body. Intellectual nature.",
-            imagePath: "long stem.png"
+            imagePath: "long stem d.png"
         },
         {
             explanation: "Very long stem: Highly intellectual individuals who may tend to overthink.",
-            imagePath: "very long stem.png"
+            imagePath: "very long stem d.png"
         },
         {
             explanation: "No loop: The writer does not react much to criticism about their health, appearance, or habits.",
-            imagePath: "no loop writers.png"
+            imagePath: "no loop d.png"
         },
         {
             explanation: "Small loop: Sensitive to criticism about physical health or appearance. Reactions vary — can include emotional responses, grudges, anger, or motivation.",
-            imagePath: "small loop.png"
+            imagePath: "small loop d.png"
         },
         {
             explanation: "Very big loop: Extremely sensitive to criticism. Reacts instantly and is highly conscious of appearance and attire.",
-            imagePath: "very big loop.png"
+            imagePath: "very big loop d.png"
         },
         {
             explanation: "Reverse 6 left: Enjoys different cultures and traditions. Interested in music, poetry, and art.",
-            imagePath: "reverse 6 left.png"
+            imagePath: "reverse 6 left d.png"
         },
         {
             explanation: "Reverse 6 right: Desires to inspire others. A good speaker with an independent spirit. Rare trait.",
-            imagePath: "reverse 6 right.png"
+            imagePath: "reverse 6 right d.png"
         },
         {
             explanation: "Gap between two stems or small down V formation: Follows rules and prefers doing what's expected. A very big V gap shows stubbornness.",
-            imagePath: "gap between 2 stem.png"
+            imagePath: "gap between 2 stem d.png"
         },
         {
             explanation: "Upper gap: Poor decision-making ability due to lack of judgment. May fall for lies easily. Can creatively combine ideas. Tends to talk more than necessary.",
-            imagePath: "upper gap.png"
+            imagePath: "upper gap d.png"
         },
         {
             explanation: "Bottom gap: Hypocritical behavior. Says certain grooming, fitness, or eating habits are bad, but still follows them privately.",
-            imagePath: "bottom gap.png"
+            imagePath: "bottom gap d.png"
         },
         {
             explanation: "Claw formation: Overdoes things that harm physical appearance or health. A workaholic who pushes extremes in work, fitness, or addiction. Likes outside food.",
-            imagePath: "claw formation.png"
+            imagePath: "claw formation d.png"
         },
         {
             explanation: "Leftward long extended start stroke: Aggressive nature with strong personal principles about food, health, grooming, etc.",
-            imagePath: "leftward long down stroke.png"
+            imagePath: "leftward long down stroke d.png"
         },
         {
             explanation: "Leftward short extended start stroke: Physically balanced and rational. Takes logical decisions.",
-            imagePath: "leftward short down stroke.png"
+            imagePath: "leftward short down stroke d.png"
         },
         {
             explanation: "Downstroke: Impulsive actions taken without much thought.",
-            imagePath: "downstroke.png"
+            imagePath: "downstroke d.png"
         },
         {
             explanation: "Left-side angle or stroke: Rebels against authority. May become aggressive unnecessarily.",
-            imagePath: "leftside angle stroke.png"
+            imagePath: "leftside angle stroke d.png"
         }
     ],
     e: [
@@ -271,15 +271,15 @@ const letterTraits = {
         },
         {
             explanation: "Medium loop: Initially listen but lose interest as the conversation continues. They don't accept opinions without validation.",
-            imagePath: "medium loop.png"
+            imagePath: "medium loop e.png"
         },
         {
             explanation: "Big loop: Kind and good listeners. Open to new people and ideas. Willing to change if needed. Calm in tough situations and express themselves well. Ideal trait.",
-            imagePath: "big loop.png"
+            imagePath: "big loop e.png"
         },
         {
             explanation: "Line outside c: Argumentative person who questions others' opinions during or after listening. Typical of journalists.",
-            imagePath: "line outside.png"
+            imagePath: "line outside e.png"
         },
         {
             explanation: "Incomplete e-loop: Good listener with a big loop, but struggles to relate to others' opinions and thoughts.",
@@ -293,45 +293,45 @@ const letterTraits = {
     f: [
         {
             explanation: "No loops: Writers have average planning and execution ability. They may plan things but often lack detail in both planning and execution.",
-            imagePath: "no loop small p.png"
+            imagePath: "no loop writers f.png"
         },
         {
             explanation: "Upper, lower loop and loop in middle: Persistent writers who don't give up despite multiple failures. Organized by nature, often successful entrepreneurs or top performers.",
-            imagePath: "upper lower mid loop.png"
+            imagePath: "upper lower mid loop f.png"
         },
         {
             explanation: "Upper and lower loops: Organized individuals who plan thoroughly before executing. Many managers write like this.",
-            imagePath: "upper lower loop.png"
+            imagePath: "upper lower loop f.png"
         },
         {
             explanation: "Only upper loop: Writers who focus on planning but struggle with execution. Suited for careers requiring planning only, like receptionist or call center roles.",
-            imagePath: "upper loop.png"
+            imagePath: "upper loop f.png"
         },
         {
             explanation: "Only lower loop: Executors who plan less and execute more. They may start unnecessary projects or achieve only partial results. They want to get things done quickly.",
-            imagePath: "lower loop.png"
+            imagePath: "lower loop f.png"
         },
         {
             explanation: "Down loop on the left side and upper loop: Writers with smooth thought flow, calm opinions, strong attachment to their mother's native place, good speaking skills, and potential as public speakers or writers.",
-            imagePath: "dowm loop on the left side and upper loop.png"
+            imagePath: "dowm loop on the left side and upper loop f.png"
         },
         {
             explanation: "Upper loop very small and lower loop bigger: Writers who plan less but execute more, prioritizing action over planning.",
-            imagePath: "upper loop is ver small.png"
+            imagePath: "upper loop is ver small f.png"
         },
         {
             explanation: "Lower loop small and upper loop bigger: Writers who plan a lot but execute less, typically executing only about 3 out of 10 planned ideas.",
-            imagePath: "lower loop is small.png"
+            imagePath: "lower loop is small f.png"
         },
         {
             explanation: "Same-size upper and lower loops: Writers who give equal importance to planning and execution, resulting in better organization and outcomes.",
-            imagePath: "upper lower loop.png"
+            imagePath: "upper lower loop f.png"
         }
     ],
     g: [
         {
             explanation: "Small loop: Spend very little money on home finances such as painting, furniture, renovation, etc. Very less social.",
-            imagePath: "small loop small g.png"
+            imagePath: "small g  upper loop is very small g.png"
         },
         {
             explanation: "Medium loop: Social but comfortable being alone. Spend money moderately, mostly on needed things. Like trying new things financially.",
@@ -371,7 +371,7 @@ const letterTraits = {
         },
         {
             explanation: "Gap between o and loop: Feel disconnected from home finances. Need to confirm with other traits.",
-            imagePath: "gap between o and the loop.png"
+            imagePath: "gap between o and the loop small g.png"
         },
         {
             explanation: "Small angle left: Avoid discussing past home finances. Get aggressive if pressed.",
@@ -387,15 +387,15 @@ const letterTraits = {
         },
         {
             explanation: "Pointed bottom and rounded loop: Prefer rough/hard sex; impulsive with home purchases. Similar traits in letters y and j.",
-            imagePath: "pointed bottom and rounded loop.png"
+            imagePath: "pointed bottom and rounded loop small g.png"
         },
         {
             explanation: "Rounded bottom and pointed loop: Suppress thoughts about sex and home purchases. Less social.",
-            imagePath: "rounded bottom and pointed loop.png"
+            imagePath: "rounded bottom and pointed loop small g.png"
         },
         {
             explanation: "Pointed bottom and loop: Impatient; buys quickly without thinking. May have interrupted libido due to health. Avoid triangle formations in y, g, j.",
-            imagePath: "pointed bottom and pointed loop.png"
+            imagePath: "pointed bottom and pointed loop small g.png"
         },
         {
             explanation: "Leftside: Makes purchases without logic or emotion; acts out of habit. Rare trait.",
@@ -477,7 +477,7 @@ const letterTraits = {
         },
         {
             explanation: "Upper incomplete circle: Pleasure-loving; only express themselves when they gain pleasure. Rare trait.",
-            imagePath: "upper incomplete circle.png"
+            imagePath: "upper incomplete circle small h.png"
         },
         {
             explanation: "Small loop at the top: Broadminded, respect differing opinions, maintain good relationships, creatively express knowledge.",
@@ -497,7 +497,7 @@ const letterTraits = {
         },
         {
             explanation: "Left side curve with long loop: Carry more than necessary when expressing ideas. Very rare.",
-            imagePath: "left side curve with very long loop.png"
+            imagePath: "left side curve with very long loop small h.png"
         },
         {
             explanation: "Wavy left side upper curve: Difficulty sharing learned knowledge, dislike comparisons, have good humor.",
@@ -525,11 +525,11 @@ const letterTraits = {
     i: [
         {
             explanation: "Left side dot: Shows procrastination. Writers lack courage, think about the past, and tend to delay tasks.",
-            imagePath: "left side dot.png"
+            imagePath: "left side dot small i.png"
         },
         {
             explanation: "Right side dot: Impatient, ambitious, future-oriented, and curious individuals who like discovering new things.",
-            imagePath: "right side dot.png"
+            imagePath: "right side dot small i.png"
         },
         {
             explanation: "No dot: Indicates disorganization in personal life and carelessness. Also a potential sign of depression.",
@@ -693,7 +693,7 @@ const letterTraits = {
         },
         {
             explanation: "Gap between stem and curve: Try to understand others but struggle to express feelings clearly and take a long time.",
-            imagePath: "gap between stem and curve.png"
+            imagePath: "gap between stem and curve small k.png"
         },
         {
             explanation: "Small letter k written as capital K: Displays anger without reason, throws tantrums.",
@@ -711,7 +711,7 @@ const letterTraits = {
         },
         {
             explanation: "Very small loop: Restrict themselves, take few actions instead of full action.",
-            imagePath: "small loop small l.png"
+            imagePath: " small loop small l.png"
         },
         {
             explanation: "Medium-size loop: Take time to convert thoughts into actions creatively; relaxed with big dreams and hope. Good conversationalists.",
@@ -719,7 +719,7 @@ const letterTraits = {
         },
         {
             explanation: "Angle at bottom and half loop: Uncompromising nature, rare trait.",
-            imagePath: "angle at bottom small l.png"
+            imagePath: "angle at the bottom small l.png"
         },
         {
             explanation: "Extra extended: Procrastinators who know action is important but keep delaying.",
@@ -845,7 +845,7 @@ const letterTraits = {
         },
         {
             explanation: "Connected left and right letters: Satisfied even if some things aren't good.",
-            imagePath: "connected with left and right side loops.png"
+            imagePath: "connected with left and right side loops small o.png"
         },
         {
             explanation: "Small line inside: Excessive health worries, anxiety, self-doubt.",
@@ -867,7 +867,7 @@ const letterTraits = {
         },
         {
             explanation: "Very large loop (pointed or rounded): Excessive energy, restlessness. Balance is needed.",
-            imagePath: "very big p curve.png"
+            imagePath: "very big p curve .png"
         },
         {
             explanation: "Upper extended stem: Helpful, physically aware but slow to react.",
@@ -895,7 +895,7 @@ const letterTraits = {
         },
         {
             explanation: "Gap at top: Weak start, but gain momentum with time.",
-            imagePath: "gap at top .png"
+            imagePath: "gap at the top small p.png"
         },
         {
             explanation: "Gap in both top and bottom: Poor body coordination. Possible physical health issue.",
@@ -903,11 +903,11 @@ const letterTraits = {
         },
         {
             explanation: "Short v formation: Aggressive and anxious where not needed, reactive to criticism.",
-            imagePath: "short v formation.png"
+            imagePath: "short v formation small p.png"
         },
         {
             explanation: "Long v formation: Very stubborn, argumentative when criticized physically.",
-            imagePath: "long v formation.png"
+            imagePath: "long v formation small p.png"
         },
         {
             explanation: "Very small p curve: Low energy, internal organ issues. Need improvement.",
@@ -915,11 +915,11 @@ const letterTraits = {
         },
         {
             explanation: "Medium p curve: Healthy energy levels, balanced body.",
-            imagePath: "medium p cure.png"
+            imagePath: "medium p cuve small p.png"
         },
         {
             explanation: "Very big curve: High energy, but it's being wasted.",
-            imagePath: "very big p curve.png"
+            imagePath: "very big p curve .png"
         }
     ],
 
@@ -930,15 +930,15 @@ const letterTraits = {
         },
         {
             explanation: "Small angle: Show anger for no reason; seen as angry by others.",
-            imagePath: "small angle.png"
+            imagePath: "small angle small q.png"
         },
         {
             explanation: "Large angle with pointed bottom: Assertive, can say no, defend themselves appropriately.",
-            imagePath: "large angle with pointed bottom.png"
+            imagePath: "large angle with pointed bottom small q.png"
         },
         {
             explanation: "Large angle with rounded bottom: Passive-aggressive. Nice but can't say no; anger builds up after being taken advantage of.",
-            imagePath: "large angle with rounded bottom.png"
+            imagePath: "large angle with rounded bottom small q.png"
         },
         {
             explanation: "Small distance: Show aggression when needed and calm down quickly. Good control.",
@@ -968,11 +968,11 @@ const letterTraits = {
         },
         {
             explanation: "Cursive with smooth right down curve: Ideal r. Quick, independent problem solvers with self-acceptance.",
-            imagePath: "cursive with right side smooth down curve.png"
+            imagePath: "cursive with right side smooth down curve small r.png"
         },
         {
             explanation: "Reverse r: Abstract creativity. Theoretical ideas may not work practically. Slow problem solvers.",
-            imagePath: "reverse normal r.png"
+            imagePath: "reverse normal r small r.png"
         },
         {
             explanation: "Left loop: Lazy; delays solving problems.",
@@ -1336,23 +1336,23 @@ const letterTraits = {
         },
         {
             explanation: "Direction 1: Past-focused, self-questioning.",
-            imagePath: "x direction 1.png"
+            imagePath: "x direction 1 small x.png"
         },
         {
             explanation: "Direction 2: Stuck in past trauma.",
-            imagePath: "x direction 2.png"
+            imagePath: "x direction 2 small x.png"
         },
         {
             explanation: "Direction 3: Future-focused but distracted by past.",
-            imagePath: "x direction 3.png"
+            imagePath: "x direction 3 small x.png"
         },
         {
             explanation: "Direction 4: Independent rebels. Challenge authority.",
-            imagePath: "x direction 4.png"
+            imagePath: "x direction 4 small x.png"
         },
         {
             explanation: "Independent, not rebellious: Free thinkers.",
-            imagePath: "x direction 5.png"
+            imagePath: "x direction 5 small x.png"
         },
         {
             explanation: "Strong rational: Logical and dominant personality.",
@@ -1385,56 +1385,8 @@ const letterTraits = {
             imagePath: "large loop size small y.png"
         },
         {
-            explanation: "Loop size 5: Emotionally dependent on others. Lives in past patterns.",
-            imagePath: "very large loop pointed:rounded bottom.png"
-        },
-        {
             explanation: "Incomplete loop 1: Low sex drive. Shy, reserved.",
             imagePath: "loop in left y small y.png"
-        },
-        {
-            explanation: "Incomplete loop 2: Lone wolf. Independent. Struggles with intimacy.",
-            imagePath: "half loop small g.png"
-        },
-        {
-            explanation: "Incomplete loop 3: Sexual restlessness. Rare.",
-            imagePath: "pointed bottom and loop.png"
-        },
-        {
-            explanation: "Incomplete loop 4: Repeats mistakes. Physically frustrated.",
-            imagePath: "left side curve small j.png"
-        },
-        {
-            explanation: "Incomplete loop 5: Lower body/sexual confusion. Dissatisfied.",
-            imagePath: "broken loop small g.png"
-        },
-        {
-            explanation: "Incomplete loop 6: Sexual anxiety and anger toward opposite sex. Harmful.",
-            imagePath: "claw small g.png"
-        },
-        {
-            explanation: "Negative y 1: Starts projects, doesn't finish. Stuck in middle.",
-            imagePath: "half loop small g.png"
-        },
-        {
-            explanation: "Negative y 2: Quits at last moment. Fear of success.",
-            imagePath: "downward loop small g.png"
-        },
-        {
-            explanation: "Negative y 3: Angles left/right = Impatient, angry.",
-            imagePath: "pointed bottom and pointed loop.png"
-        },
-        {
-            explanation: "Negative y 4: Avoids sex. Not open about it.",
-            imagePath: "no loop small g.png"
-        },
-        {
-            explanation: "Negative y 5: Avoids sex/social/financial focus.",
-            imagePath: "small loop small g.png"
-        },
-        {
-            explanation: "Negative y 6: Doesn't trust due to betrayal. Smaller loop = slower trust.",
-            imagePath: "loop not reaching upper baseline small g.png"
         }
     ],
     z: [
