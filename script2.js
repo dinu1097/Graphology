@@ -2272,7 +2272,17 @@ for (const letter in letterTraits) {
     }
 
     const btn = document.createElement("button");
-    btn.textContent = `Trait ${index + 1}`;
+
+    // Set button text based on image filename (without extension)
+    if (traitObj.imagePath) {
+      const filename = traitObj.imagePath
+        .split('/')
+        .pop()
+        .replace(/\.[^/.]+$/, ''); // Remove file extension like .png, .jpg
+      btn.textContent = filename;
+    } else {
+      btn.textContent = `Trait ${index + 1}`;
+    }
 
     btn.onclick = () => {
       if (btn.disabled) return;
@@ -2283,13 +2293,13 @@ for (const letter in letterTraits) {
     };
 
     card.appendChild(btn);
-
     row.appendChild(card);
   });
 
   section.appendChild(row);
   traitsContainer.appendChild(section);
 }
+
 
 
 // Add text to output box (without images)
