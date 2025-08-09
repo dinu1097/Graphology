@@ -2231,7 +2231,7 @@ u: [
 
 // Helper function to build image URLs based on letter case
 function getImageUrl(letter, imageFileName) {
-  const baseURL = "http://localhost/Task%20Manager/Clients/Sushant/Graphology/Graphology/";
+  const baseURL = "";
   const folder = (letter === letter.toUpperCase()) ? "CapitalLetters/" : "letters/";
   return baseURL + folder + encodeURIComponent(imageFileName);
 }
