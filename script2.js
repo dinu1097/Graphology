@@ -2242,7 +2242,9 @@ const traitsContainer = document.getElementById("traitsContainer");
 // Clear container before filling
 traitsContainer.innerHTML = "";
 
-// Create letter sections and buttons with images
+// Map to track which traits are currently added: key = trait number, value = trait container element
+const addedTraits = new Map();
+
 let globalCounter = 1; // start counting at 1
 
 for (const letter in letterTraits) {
@@ -2269,6 +2271,7 @@ for (const letter in letterTraits) {
     }
 
     const btn = document.createElement("button");
+    btn.setAttribute('data-trait-number', globalCounter);
 
     if (traitObj.imagePath) {
       const filename = traitObj.imagePath
@@ -2284,39 +2287,44 @@ for (const letter in letterTraits) {
     const currentNumber = globalCounter;
 
     btn.onclick = () => {
-      if (btn.disabled) return;
-      addText(traitObj, letter.toUpperCase(), currentNumber);
-      btn.style.backgroundColor = "#d9534f";
-      btn.style.cursor = "not-allowed";
-      btn.disabled = true;
+      if (addedTraits.has(currentNumber)) {
+        // Trait is already added - remove it and reset button style
+        removeTrait(currentNumber);
+        btn.style.backgroundColor = "";
+        btn.style.cursor = "";
+      } else {
+        // Trait not added - add it and change button style
+        addText(traitObj, letter.toUpperCase(), currentNumber);
+        btn.style.backgroundColor = "#d9534f";
+        btn.style.cursor = "not-allowed";
+      }
+      saveButtonStates();
+      saveOutput();
     };
 
     card.appendChild(btn);
     row.appendChild(card);
 
-    globalCounter++; // move to next number
+    globalCounter++;
   });
 
   section.appendChild(row);
   traitsContainer.appendChild(section);
 }
 
+const output = document.getElementById('output');
+const storageKeyText = "graphologyParagraph";
+const storageKeyButtons = "graphologyButtonStates";
 
-
-
-
-// Add text to output box (without images)
+// Add text to output box (without images), and store reference for removal
 function addText(traitObj, letter, number) {
-  const output = document.getElementById('output');
-
   const traitContainer = document.createElement('div');
   traitContainer.className = 'trait-container';
+  traitContainer.dataset.traitId = number;  // store trait number for easy lookup/removal
 
   const textElement = document.createElement('span');
-  const subscript = `<sub>${number}</sub>`; // only number
+  const subscript = `<sub>${number}</sub>`;
   textElement.innerHTML = `${traitObj.explanation} ${subscript}`;
-
-
 
   traitContainer.appendChild(textElement);
   traitContainer.appendChild(document.createElement('br'));
@@ -2326,42 +2334,131 @@ function addText(traitObj, letter, number) {
     output.appendChild(document.createElement('br'));
   }
   output.appendChild(traitContainer);
+
+  addedTraits.set(number, traitContainer);
 }
 
-// Modal open/close functions (your existing code)
+// Remove trait text by number
+function removeTrait(number) {
+  const traitContainer = addedTraits.get(number);
+  if (traitContainer) {
+    const previousSibling = traitContainer.previousSibling;
+    traitContainer.remove();
+    
+    // Remove any extra <br> elements if they exist
+    if (previousSibling && previousSibling.nodeName === 'BR') {
+      const prevPrev = previousSibling.previousSibling;
+      if (prevPrev && prevPrev.nodeName === 'BR') {
+        previousSibling.remove();
+        prevPrev.remove();
+      }
+    }
+    
+    addedTraits.delete(number);
+  }
+}
+
+// Save paragraph and button states in localStorage
+function saveOutput() {
+  localStorage.setItem(storageKeyText, output.innerHTML);
+}
+
+function saveButtonStates() {
+  // Save which trait numbers are currently added as array of numbers
+  const activeTraits = Array.from(addedTraits.keys());
+  localStorage.setItem(storageKeyButtons, JSON.stringify(activeTraits));
+}
+
+// Utility to find the button element by trait number
+function findButtonByTraitNumber(traitNumber) {
+  return traitsContainer.querySelector(`button[data-trait-number="${traitNumber}"]`);
+}
+
+// Restore paragraph and button states from localStorage on load
+document.addEventListener("DOMContentLoaded", () => {
+  const savedText = localStorage.getItem(storageKeyText);
+  if (savedText !== null) {
+    output.innerHTML = savedText;
+  }
+
+  const savedButtons = localStorage.getItem(storageKeyButtons);
+  if (savedButtons !== null) {
+    const activeTraits = JSON.parse(savedButtons);
+    
+    // First, clear the addedTraits map
+    addedTraits.clear();
+    
+    // Then restore each trait
+    activeTraits.forEach((traitNumber) => {
+      // Find the button and set its style
+      const btn = findButtonByTraitNumber(traitNumber);
+      if (btn) {
+        btn.style.backgroundColor = "#d9534f";
+        btn.style.cursor = "not-allowed";
+        // Add to the map (we'll rebuild the DOM references when needed)
+        addedTraits.set(traitNumber, null);
+      }
+    });
+  }
+});
+
+// Clear function (can be called by a clear button)
+function clearParagraph() {
+  if (confirm("Are you sure you want to clear the paragraph?")) {
+    output.innerHTML = "";
+    localStorage.removeItem(storageKeyText);
+    localStorage.removeItem(storageKeyButtons);
+
+    // Reset all buttons style
+    const buttons = traitsContainer.querySelectorAll("button");
+    buttons.forEach(btn => {
+      btn.style.backgroundColor = "";
+      btn.style.cursor = "";
+    });
+    addedTraits.clear();
+  }
+}
+
+// Modal functions
 function openModal() {
-  document.getElementById("traitsModal").style.display = "block";
+  document.getElementById('traitsModal').style.display = 'block';
 }
+
 function closeModal() {
-  document.getElementById("traitsModal").style.display = "none";
+  document.getElementById('traitsModal').style.display = 'none';
 }
-window.onclick = function(event) {
-  const modal = document.getElementById("traitsModal");
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
 
-// Toggle output visibility (your existing code)
+// Toggle output visibility
 function toggleOutput() {
-  const output = document.getElementById("output");
-  const toggleBtn = document.getElementById("toggleBtn");
-
-  if (output.style.display === "none") {
-    output.style.display = "block";
-    toggleBtn.textContent = "Hide Paragraph";
+  const output = document.getElementById('output');
+  const toggleBtn = document.getElementById('toggleBtn');
+  
+  if (output.style.display === 'none') {
+    output.style.display = 'block';
+    toggleBtn.textContent = 'Hide Paragraph';
   } else {
-    output.style.display = "none";
-    toggleBtn.textContent = "Show Paragraph";
+    output.style.display = 'none';
+    toggleBtn.textContent = 'Show Paragraph';
   }
 }
 
-// Download output text as .txt (your existing code)
+// Download function
 function downloadText() {
-  const text = document.getElementById('output').innerText;
-  const blob = new Blob([text], { type: "text/plain" });
-  const link = document.createElement("a");
-  link.download = "graphology_paragraph.txt";
-  link.href = window.URL.createObjectURL(blob);
-  link.click();
+  const text = output.innerText;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'graphology-analysis.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
+
+// Save on any manual typing
+output.addEventListener("input", () => {
+  saveOutput();
+});
+
+
