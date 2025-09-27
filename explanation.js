@@ -2238,4 +2238,34 @@ const letterTraits = {
 
 
 
+// Inside the letterTraits[letter].forEach loop:
+const btn = document.createElement("button");
+btn.setAttribute('data-trait-number', currentNumber); // Add this line
 
+if (traitObj.imagePath) {
+  const filename = traitObj.imagePath
+    .split('/')
+    .pop()
+    .replace(/\.[^/.]+$/, '');
+  btn.textContent = filename;
+} else {
+  btn.textContent = `Trait ${globalCounter}`;
+}
+
+// Store the number for THIS button
+const currentNumber = globalCounter;
+
+btn.onclick = () => {
+  if (addedTraits.has(currentNumber)) {
+    // Trait is already added - remove it and reset button style
+    removeTrait(currentNumber);
+    btn.style.backgroundColor = "";
+    btn.style.cursor = "";
+  } else {
+    // Trait not added - add it and change button style
+    addText(traitObj, letter.toUpperCase(), currentNumber);
+    btn.style.backgroundColor = "#d9534f";
+    btn.style.cursor = "not-allowed";
+  }
+  saveButtonStates();
+};
