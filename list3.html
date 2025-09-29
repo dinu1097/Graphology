@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Explanations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-4 sm:p-8">
+
+  <h1 class="text-3xl font-bold mb-6 text-center sm:text-left">Graphology Explanations</h1>
+  <a href="index.html" 
+     class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-6">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         class="h-5 w-5 mr-2" 
+         fill="none" 
+         viewBox="0 0 24 24" 
+         stroke="currentColor" 
+         stroke-width="2">
+      <path stroke-linecap="round" 
+            stroke-linejoin="round" 
+            d="M3 12l9-9 9 9M4 10v10h6v-6h4v6h6V10" />
+    </svg>
+    Home
+  </a>
+
+  <!-- Image Grid -->
+  <div id="explanations" class="max-w-7xl mx-auto grid grid-cols-5 gap-4"></div>
+
+  <!-- Load the traits -->
+  <script src="script2.js"></script>
+
+  <!-- Render the cards -->
+  <script>
+    const container = document.getElementById('explanations');
+    let count = 1;
+
+    for (const letter in letterTraits) {
+      letterTraits[letter].forEach(trait => {
+        const card = document.createElement('div');
+        card.className = "bg-white shadow p-2 rounded-lg flex flex-col items-center";
+
+        // Number
+        const num = document.createElement('div');
+        num.className = "text-xs text-gray-500 mb-1";
+        num.textContent = `#${count}`;
+
+        // Image
+        const img = document.createElement('img');
+        img.className = "rounded-lg border w-full object-contain";
+        const isCapital = letter === letter.toUpperCase();
+        const folder = isCapital ? "CapitalLetters" : "letters";
+        img.src = `${folder}/${trait.imagePath}`;
+        img.alt = `Trait ${count}`;
+
+        // Append
+        card.appendChild(num);
+        card.appendChild(img);
+        container.appendChild(card);
+
+        count++;
+      });
+    }
+  </script>
+
+</body>
+</html>
