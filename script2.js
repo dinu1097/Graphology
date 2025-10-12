@@ -1690,7 +1690,7 @@ u: [
         },
         {
             "explanation": "Very low middle bar: Bonds through comfort and stability.",
-            "imagePath": "very low middle line h .png"
+            "imagePath": "middle line in very bottom h .png"
         },
         {
             "explanation": "Narrow H: Shy, takes time to open up in bonding.",
@@ -1744,10 +1744,6 @@ u: [
             "imagePath": "gap at the top t.png"
         },
         {
-            "explanation": "Concave top, controlling bottom: Conflict with controlling mother.",
-            "imagePath": "upper line with round bottoms.png"
-        },
-        {
             "explanation": "I as small i: Insecure, hesitant to initiate.",
             "imagePath": "capital I written as small I.png"
         },
@@ -1782,26 +1778,27 @@ u: [
     ],
     J: [
         {
-            "explanation": "Upper bar, round bottom: Reflects on past/future before present action. Slow instinctive response.",
-            "imagePath": "no bar and rounded bottom.png"
+            "explanation": "Upper line with round bottom: Thinks about past and future before reacting in the present. Responds slowly and thoughtfully.",
+            "imagePath": "j_upper_round.png"
         },
         {
-            "explanation": "Upper bar, pointed bottom: Similar but reacts quickly.",
-            "imagePath": "no bar and pointed bottom.png"
+            "explanation": "Upper line with pointed bottom: Similar reflective nature but reacts more quickly and confidently.",
+            "imagePath": "j_upper_pointed.png"
         },
         {
-            "explanation": "Gap: Thought and instinct not aligned.",
-            "imagePath": "gap in j capital j.png"
+            "explanation": "Gap between top and bottom: Disconnection between thoughts and instincts. May act differently than intended.",
+            "imagePath": "j_gap.png"
         },
         {
-            "explanation": "No bar, round bottom: Acts based on present, slow to react.",
-            "imagePath": "rounded bottom loop small p.png"
+            "explanation": "No bar with round bottom: Focused on present actions. Responds instinctively but takes time to prepare.",
+            "imagePath": "j_no_bar_round.png"
         },
         {
-            "explanation": "No bar, pointed bottom: Fast present reaction without past/future reflection.",
-            "imagePath": "pointed bottom loop small p.png"
+            "explanation": "No bar with pointed bottom: Acts instantly on current thoughts without considering past or future.",
+            "imagePath": "j_no_bar_pointed.png"
         }
     ],
+
     K: [
         {
             "explanation": "Very high middle: Spiritual uniqueness, prefers soulful activities.",

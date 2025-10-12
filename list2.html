@@ -31,46 +31,46 @@
 
   <!-- Render the cards -->
 <script>
-  const container = document.getElementById('explanations');
-  let count = 1;
+  const script = document.createElement('script');
+  script.src = 'script2.js?v=' + new Date().getTime();
+  script.defer = true;
+  script.onload = () => {
+    // your rendering logic
+    const container = document.getElementById('explanations');
+    let count = 1;
 
-  for (const letter in letterTraits) {
-    letterTraits[letter].forEach(trait => {
-      const card = document.createElement('div');
-      card.className = "bg-white shadow p-4 rounded-lg";
+    for (const letter in letterTraits) {
+      letterTraits[letter].forEach(trait => {
+        const card = document.createElement('div');
+        card.className = "bg-white shadow p-4 rounded-lg";
 
-      // Number
-      const num = document.createElement('div');
-      num.className = "text-sm text-gray-500 mb-1";
-      num.textContent = `#${count}`;
+        const num = document.createElement('div');
+        num.className = "text-sm text-gray-500 mb-1";
+        num.textContent = `#${count}`;
 
-      // Extract filename without extension
-      const fileName = trait.imagePath.split('/').pop().split('.').slice(0, -1).join('.');
+        const fileName = trait.imagePath.split('/').pop().split('.').slice(0, -1).join('.');
+        const text = document.createElement('p');
+        text.className = "text-gray-800 mb-2";
+        text.textContent = `${fileName}: ${trait.explanation}`;
 
-      // Explanation with filename at the start
-      const text = document.createElement('p');
-      text.className = "text-gray-800 mb-2";
-      text.textContent = `${fileName}: ${trait.explanation}`;
+        const img = document.createElement('img');
+        img.className = "mt-2 rounded-lg border";
+        const isCapital = letter === letter.toUpperCase();
+        const folder = isCapital ? "CapitalLetters" : "letters";
+        img.src = `${folder}/${trait.imagePath}`;
+        img.alt = trait.explanation;
 
-      // Image
-      const img = document.createElement('img');
-      img.className = "mt-2 rounded-lg border";
-
-      const isCapital = letter === letter.toUpperCase();
-      const folder = isCapital ? "CapitalLetters" : "letters";
-      img.src = `${folder}/${trait.imagePath}`;
-      img.alt = trait.explanation;
-
-      // Append to card
-      card.appendChild(num);
-      card.appendChild(text);
-      card.appendChild(img);
-      container.appendChild(card);
-
-      count++;
-    });
-  }
+        card.appendChild(num);
+        card.appendChild(text);
+        card.appendChild(img);
+        container.appendChild(card);
+        count++;
+      });
+    }
+  };
+  document.head.appendChild(script);
 </script>
+
 
 </body>
 </html>
